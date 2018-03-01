@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <div class="flex mb-8">
       <div class="w-5/6 md:w-2/3 lg:w-1/2 mx-auto">
         <h1 class="text-grey-darkest mb-8">Base 64 Encode</h1>
