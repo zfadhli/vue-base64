@@ -1,10 +1,10 @@
 <template>
   <div id="app" class="font-sans antialised leading-normal min-h-screen flex flex-col">
     <div class="container mx-auto py-10 flex-1">
-      <div class="flex justify-center mb-16">
+      <header class="flex justify-center mb-16">
         <router-link to="/encode" active-class="active" class="text-3xl text-grey-darkest hover:text-black mr-4 no-underline border-b-4 border-transparent hover:border-blue">Encode</router-link>
         <router-link to="/decode" active-class="active" class="text-3xl text-grey-darkest hover:text-black mr-4 no-underline border-b-4 border-transparent hover:border-blue">Decode</router-link>
-      </div>
+      </header>
       <router-view/>
     </div>
     <footer class="self-center pb-8">
