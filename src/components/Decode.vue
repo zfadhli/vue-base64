@@ -11,12 +11,11 @@
     <div>
       <div class="flex">
         <div class="w-1/2 mx-auto">
-          <!-- <p>base64Decoded: {{base64Decoded}}</p> -->
           <div class="hidden">{{decodedText}}</div>
           <ul class="list-reset">
             <li v-for="(t, i) in decodedArr" :key="i" class="w-full mb-4 flex items-baseline">
-              <a v-if="t.url" :href="t.text" class="no-underline hover:underline text-blue-dark overflow-y-scroll break-words mr-6">{{t.text}}</a>
-              <span v-else class="overflow-y-scroll break-words mr-6">{{t.text}}</span>
+              <a v-if="t.url" :href="t.text" class="overflow-y-scroll break-words no-underline hover:underline text-blue-darker font-semibold mr-6">{{t.text}}</a>
+              <span v-else class="overflow-y-scroll break-words text-grey-darkest font-semibold mr-6">{{t.text}}</span>
               <div class="flex justify-end">
                 <button v-clipboard="t.text" @success="handleSuccess" class="px-4 py-2 text-grey-darker bg-white hover:bg-grey-lightest rounded border flex items-center">
                   <svg class="stroke-current text-grey-darker w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
@@ -56,7 +55,7 @@ export default {
   },
   methods: {
     handleSuccess (e) {
-      this.$toasted.success('Copied text', {
+      this.$toasted.show('Copied text', {
         theme: 'primary',
         position: 'top-right',
         duration: 3000

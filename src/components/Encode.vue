@@ -13,7 +13,7 @@
         <div class="w-1/2 mx-auto">
           <div class="flex">
             <div class="w-3/4">
-              <p class="overflow-y-scroll break-words text-grey-darkest mr-2">{{base64Encoded}}</p>
+              <p class="overflow-y-scroll break-words text-grey-darkest font-semibold mr-2">{{base64Encoded}}</p>
             </div>
             <div class="w-1/4">
               <div class="flex flex-col">
@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     handleSuccess (text) {
-      this.$toasted.success(text, {
+      this.$toasted.show(text, {
         theme: 'primary',
         position: 'top-right',
         duration: 3000
