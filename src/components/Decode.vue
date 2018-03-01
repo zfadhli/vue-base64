@@ -25,7 +25,7 @@
                   </svg>
                   <span>Copy</span>
                 </button>
-                <a v-if="t.url" :href="t.text" target="_blank" class="px-4 py-2 text-grey-darker bg-white hover:bg-grey-lightest rounded border flex items-center ml-4 no-underline">
+                <a v-if="t.url" :href="t.text" target="_blank" rel="noopener" class="px-4 py-2 text-grey-darker bg-white hover:bg-grey-lightest rounded border flex items-center ml-4 no-underline">
                   <svg class="stroke-current text-grey-darker w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                     <g class="nc-icon-wrapper" fill="#444444">
                       <path d="M6 16.82l18 18 14-14V30h4V14H26v4h9.18L24 29.18 8.82 14 6 16.82z"></path>
