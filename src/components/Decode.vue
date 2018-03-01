@@ -14,7 +14,7 @@
           <div class="hidden">{{decodedText}}</div>
           <ul class="list-reset">
             <li v-for="(t, i) in decodedArr" :key="i" class="w-full mb-4 flex flex-col md:flex-row items-center md:items-start border-b md:border-none pb-2 md:pb-0">
-              <a v-if="t.url" :href="t.text" class="overflow-y-scroll break-words no-underline hover:underline text-blue-darker font-semibold md:mr-6 mb-2 md:mb-0">{{t.text}}</a>
+              <a v-if="t.url" :href="t.text" target="_blank" ref="noopener" class="overflow-y-scroll break-words no-underline hover:underline text-blue-darker font-semibold md:mr-6 mb-2 md:mb-0">{{t.text}}</a>
               <span v-else class="overflow-y-scroll break-words text-grey-darkest font-semibold md:mr-6 mb-2 md:mb-0">{{t.text}}</span>
               <div class="flex justify-end">
                 <button v-clipboard="t.text" @success="handleSuccess" class="px-4 py-2 text-grey-darker bg-white hover:bg-grey-lightest rounded border flex items-center">
