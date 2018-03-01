@@ -1,4 +1,4 @@
-# vue-base64-v2
+# vue-base64
 
 > A Vue.js project
 
