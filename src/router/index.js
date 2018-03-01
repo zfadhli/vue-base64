@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Encode from '@/components/Encode'
 import Decode from '@/components/Decode'
+import NotFound from '@/components/404'
 
 Vue.use(Router)
 
@@ -26,6 +27,11 @@ export default new Router({
       path: '/decode/:hashcode',
       name: 'DecodeHash',
       component: Decode
+    },
+    {
+      path: '*',
+      name: 'NotFound',
+      component: NotFound
     }
   ]
 })
