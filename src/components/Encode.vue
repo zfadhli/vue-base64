@@ -62,7 +62,7 @@ export default {
       return base64.encode(utf8.encode(this.text))
     },
     base64EncodedUrl () {
-      return 'http://localhost:8080/decode/' + this.base64Encoded
+      return 'https://base64.now.sh/decode/' + this.base64Encoded
     }
   }
 }
