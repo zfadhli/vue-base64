@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="flex mb-8">
-      <div class="w-1/2 mx-auto">
+      <div class="w-5/6 md:w-2/3 lg:w-1/2 mx-auto">
         <h1 class="text-grey-darkest mb-8">Base 64 Decode</h1>
         <form class="mb-8">
           <textarea class="border border-grey rounded w-full leading-normal text-grey-darkest mb-2" rows="10" v-model="text"></textarea>
@@ -10,12 +10,12 @@
     </div>
     <div>
       <div class="flex">
-        <div class="w-1/2 mx-auto">
+        <div class="w-5/6 md:w-2/3 lg:w-1/2 mx-auto">
           <div class="hidden">{{decodedText}}</div>
           <ul class="list-reset">
-            <li v-for="(t, i) in decodedArr" :key="i" class="w-full mb-4 flex items-baseline">
-              <a v-if="t.url" :href="t.text" class="overflow-y-scroll break-words no-underline hover:underline text-blue-darker font-semibold mr-6">{{t.text}}</a>
-              <span v-else class="overflow-y-scroll break-words text-grey-darkest font-semibold mr-6">{{t.text}}</span>
+            <li v-for="(t, i) in decodedArr" :key="i" class="w-full mb-4 flex flex-col md:flex-row items-center md:items-start border-b md:border-none pb-2 md:pb-0">
+              <a v-if="t.url" :href="t.text" class="overflow-y-scroll break-words no-underline hover:underline text-blue-darker font-semibold md:mr-6 mb-2 md:mb-0">{{t.text}}</a>
+              <span v-else class="overflow-y-scroll break-words text-grey-darkest font-semibold md:mr-6 mb-2 md:mb-0">{{t.text}}</span>
               <div class="flex justify-end">
                 <button v-clipboard="t.text" @success="handleSuccess" class="px-4 py-2 text-grey-darker bg-white hover:bg-grey-lightest rounded border flex items-center">
                   <svg class="stroke-current text-grey-darker w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
